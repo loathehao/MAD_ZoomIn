@@ -10,8 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+import cn.bmob.v3.Bmob;
 
-import mad.android.com.mad.MySpace;
 
 
 import java.util.ArrayList;
@@ -44,13 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         main_content =findViewById(R.id.main_content);
         bottom_toolbar =findViewById(R.id.bottom_toolbar);
 
-        myInfo.setOnClickListener(new View.OnClickListener(){
+        myInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            Toast toast = Toast.makeText(MainActivity.this,"要显示的内容",Toast.LENGTH_LONG);
-            toast.show();
-            startActivity(new Intent(MainActivity.this,MySpace.class));
-        }
+                startActivity(new Intent(MainActivity.this, MeFavoriteActivity.class));
+            }
         });
         iv_recently.setOnClickListener(this);
         iv_comment.setOnClickListener(this);
@@ -114,12 +112,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(main_content.getCurrentItem() !=2){
                     setCurrentItem(2);
                 }
-                break;
-
-            case R.id.myInfo:
-                Intent main_to_info = new Intent(MainActivity.this,MySpace.class);
-                startActivity(main_to_info);
-                finish();
                 break;
         }
 

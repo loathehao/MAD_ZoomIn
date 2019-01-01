@@ -19,7 +19,7 @@
                 android:id="@+id/iv_back"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/back" />
+                android:src="@drawable/ic_back" />
 
             <TextView
                 android:id="@+id/tv_bar_title"

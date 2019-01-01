@@ -2,16 +2,37 @@
 
 <resources>
 
+    <color name="transparent">#00000000</color>
+
+    <color name="ghostwhite">#F8F8FF</color>
+
+    <color name="lightgrey">#D3D3D3</color>
+    
+    <color name="gray">#616161</color>
+
+    <color name="whitesmoke">#F5F5F5</color>
+
+    <color name="teal">#008080</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+
+    <color name="darkgrey">#8e8989</color>
+
     <color name="colorPrimary">#D68F8B</color>
 
     <color name="colorPrimaryDark">#D68F8B</color>
 
     <color name="colorAccent">#D68F8B</color>
 
-    <color name="colorTheme">#D68F8B</color>
+    <color name="colorTheme">#da726c</color>
 
-    <!--页面背景的颜色-->
+    <color name="colorTheme1">#d48783</color>
 
+    <color name="colorTheme2">#d2817c</color>
+
+    <color name="colorTheme3">#d47670</color>
 
     <color name="color_page_bg">#F1F3F4</color>
 

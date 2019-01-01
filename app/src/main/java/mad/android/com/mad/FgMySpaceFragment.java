@@ -30,8 +30,8 @@ public class FgMySpaceFragment extends Fragment {
     @Override
     public void onViewCreated(View view,Bundle savedInstanceState){
         super.onViewCreated(view,savedInstanceState);
-        tab_my_space=(TabLayout) view.findViewById(R.id.tab_my_space);
-        vp_my_space=(ViewPager) view.findViewById(R.id.vp_my_space);
+        //tab_my_space=(TabLayout) view.findViewById(R.id.tab_my_space);
+        //vp_my_space=(ViewPager) view.findViewById(R.id.vp_my_space);
         setViewPager();
         vp_my_space.setOffscreenPageLimit(2);
         tab_my_space.setupWithViewPager(vp_my_space);
