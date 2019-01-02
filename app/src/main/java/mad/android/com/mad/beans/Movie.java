@@ -13,7 +13,15 @@ public class Movie extends BmobObject {
     private String brief;
     private String casts;
     private String directors;
+    private boolean favorite;
+    private boolean like;
     private BmobRelation likes;
+
+    public boolean getFavorite() {return favorite;}
+    public void setFavorite(boolean favorite){this.favorite = favorite;}
+
+    public boolean getLike() {return like;}
+    public void setLike(boolean Like){this.like = like;}
 
     public double getRating(){
         return rating;

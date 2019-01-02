@@ -10,6 +10,8 @@ public class AppUser extends BmobUser {
     private String userArea;
     private String userMessage;
 
+
+
     public String getUserAvatarUrl() {
         return userAvatarUrl;
     }

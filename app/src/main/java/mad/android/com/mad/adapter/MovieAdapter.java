@@ -45,14 +45,15 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
         final BmobQuery<Movie> movieBmobQuery = new BmobQuery<>();
         movieBmobQuery.findObjects(new FindListener<Movie>() {
+
             @Override
             public void done(List<Movie> list, BmobException e) {
                 holder.item_movie_name.setText(bean.getTitle());
                 holder.item_movie_introduce.setText(bean.getBrief());
                 Glide.with(context).load(objects.get(position).getPosterUrl()).into(((ViewHolder) holder).item_movie_pic);
+
             }
         });
-
     }
 
     @Override
