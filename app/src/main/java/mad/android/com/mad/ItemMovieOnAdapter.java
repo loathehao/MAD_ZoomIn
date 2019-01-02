@@ -17,18 +17,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemMovieOnAdapter extends RecyclerView.Adapter<ItemMovieOnAdapter.ViewHolder> {
-
     private List<MoviesBean.SubjectsBean> objects = new ArrayList<MoviesBean.SubjectsBean>();
 
     private Context context;
 
     public ItemMovieOnAdapter(Context context) {
-
         this.context = context;
     }
+
     public void setData(List<MoviesBean.SubjectsBean> objects){
         this.objects = objects;
     }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -89,6 +89,8 @@ public class ItemMovieOnAdapter extends RecyclerView.Adapter<ItemMovieOnAdapter.
                 context.startActivity(intent);
             }
         });
+
+
     }
 
     @Override

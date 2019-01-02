@@ -3,9 +3,8 @@ package mad.android.com.mad.model;
 import android.util.Log;
 
 import mad.android.com.mad.MoviesBean;
-import mad.android.com.mad.network.RetrofitHelper;
 import mad.android.com.mad.network.Api;
-
+import mad.android.com.mad.network.RetrofitHelper;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;

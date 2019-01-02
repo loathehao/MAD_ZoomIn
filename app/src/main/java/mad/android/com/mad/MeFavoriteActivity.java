@@ -49,5 +49,13 @@ public class MeFavoriteActivity extends Activity {
                 startActivity(new Intent(MeFavoriteActivity.this, MeInfoActivity.class));
             }
         });
+
+        info_myfavorite = findViewById(R.id.info_myfavorite);
+        info_myfavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MeFavoriteActivity.this, MyfavoriteActivity.class));
+            }
+        });
     }
 }

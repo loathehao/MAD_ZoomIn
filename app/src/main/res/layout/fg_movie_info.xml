@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_movies"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl_movie_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_movie_info_poster"
+                                android:layout_width="110dp"
+                                android:layout_height="160dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_margin="15dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="145dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/movie_info_text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_movie_info_title"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:text="电影标题"
+                                            android:textColor="@color/text_common"
+                                            android:textSize="18dp" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_movie_info_genres"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="类型："
+                                            android:textSize="15dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_movie_info_time"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="上映时间："
+                                            android:textSize="15dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_movie_info_length"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="时长："
+                                            android:textSize="15dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical">
+
+
+                                            <ImageView
+                                                android:id="@+id/like"
+                                                android:layout_width="120dp"
+                                                android:layout_height="25dp"
+                                                android:src="@drawable/like"/>
+
+                                            <TextView
+                                                android:id="@+id/collect"
+                                                android:layout_width="120dp"
+                                                android:layout_height="25dp"
+                                                android:text="收藏"
+                                                android:textSize="20dp" />
+
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="评分:"
+                                    android:layout_marginRight="10dp"
+                                    android:textColor="#2f2f2f"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="20sp"/>
+
+                                    <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                                        android:id="@+id/ratingbar"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        app:srb_starSize="30dp"
+                                        app:srb_numberOfStars="5"
+                                        app:srb_fillColor="@color/colorTheme"
+                                        app:srb_borderColor="@color/colorTheme2"
+                                        app:srb_rating="1"
+                                        app:srb_stepSize="1"
+                                        app:srb_drawBorderEnabled="true"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="35dp"
+                                android:layout_height="120dp"
+                                android:background="@color/colorAccent"
+                                android:paddingTop="30dp"
+                                android:text="简介"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/movie_info_brief"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="30dp"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="35dp"
+                                android:layout_height="120dp"
+                                android:paddingTop="30dp"
+                                android:text="影人"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/movie_info_filmmakers"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </android.support.v7.widget.RecyclerView>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="35dp"
+                                android:layout_height="120dp"
+                                android:paddingTop="30dp"
+                                android:text="剧照"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/movie_info_photos"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </android.support.v7.widget.RecyclerView>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="35dp"
+                                android:layout_height="120dp"
+                                android:paddingTop="30dp"
+                                android:text="视频"
+                                android:textAlignment="center"
+                                android:textSize="20sp" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/movie_info_videos"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </android.support.v7.widget.RecyclerView>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

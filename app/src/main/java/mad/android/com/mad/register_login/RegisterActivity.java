@@ -92,7 +92,9 @@ public class RegisterActivity extends Activity {
                 if(isHidden){
                     //不需要见密码
                     passwordEyeImv.setImageResource(R.drawable.ic_visibility_off);
+
                     passwordEt.setTransformationMethod(PasswordTransformationMethod.getInstance());
+
                 }
                 else{
                     //需要见密码

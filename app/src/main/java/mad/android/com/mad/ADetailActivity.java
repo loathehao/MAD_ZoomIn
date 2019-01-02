@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.iarcuschin.simpleratingbar.SimpleRatingBar;
+
 public class ADetailActivity extends Activity {
 
     private WebView wbNews;
@@ -19,7 +21,9 @@ public class ADetailActivity extends Activity {
     private WebViewClient webViewClient;
     private TextView tv_bar_title;
     private ImageView iv_back;
+    private SimpleRatingBar ratingBar;
     private ProgressBar pb_load;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,8 @@ public class ADetailActivity extends Activity {
     }
 
     private void initView() {
+        ratingBar = findViewById(R.id.ratingbar);
+
         wbNews = (WebView) findViewById(R.id.wb_news);
         wbNews.getSettings().setJavaScriptEnabled(true);
         wbNews.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
