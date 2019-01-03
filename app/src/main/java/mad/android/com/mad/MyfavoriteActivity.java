@@ -38,7 +38,7 @@ public class MyfavoriteActivity extends Activity {
 
         Bmob.initialize(this, "acbc897f711009c562745ec99aacfd49");
 
-        loadData();
+
 
         ImageButton titleImv = (ImageButton) findViewById(R.id.title_imv);
         titleImv.setOnClickListener(new View.OnClickListener() {
@@ -54,29 +54,13 @@ public class MyfavoriteActivity extends Activity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new FavoriteAdapter(this));
 
+        loadData();
+
 
     }
 
     private void loadData(){
-        BmobQuery<Movie> movieBmobQuery = new BmobQuery<>();
-        movieBmobQuery.order("-createdAt");
-        movieBmobQuery.addWhereEqualTo("title","来电狂响");
-        movieBmobQuery.findObjects(new FindListener<Movie>() {
-            @Override
-            public void done(List<Movie> list, BmobException e) {
-                if(e==null){
-                    Toast.makeText(MyfavoriteActivity.this, "连接成功 " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    for(Movie td : list){
-                        bankCards.add(td);
 
-                    }
-                }
-                else{
-                    Toast.makeText(MyfavoriteActivity.this, "连接失败 " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
     }
 
 
@@ -95,11 +79,27 @@ public class MyfavoriteActivity extends Activity {
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
+        public void onBindViewHolder(final ViewHolder holder, int position) {
             final Movie bean = bankCards.get(position);
-            holder.item_movie_name.setText(bean.getTitle());
-            holder.item_movie_introduce.setText(bean.getBrief());
-            Glide.with(context).load(bankCards.get(position).getPosterUrl()).into(((ViewHolder) holder).item_movie_pic);
+            BmobQuery<Movie> movieBmobQuery = new BmobQuery<>();
+            movieBmobQuery.order("-createdAt");
+            movieBmobQuery.addWhereEqualTo("like","true");
+            movieBmobQuery.findObjects(new FindListener<Movie>() {
+                @Override
+                public void done(List<Movie> list, BmobException e) {
+                    if(e==null){
+                        for(int i = 0;i<list.size();i++){
+                            holder.item_movie_name.setText(list.get(i).getTitle());
+                            holder.item_movie_introduce.setText(list.get(i).getBrief());
+                            Glide.with(context).load(list.get(i).getPosterUrl()).into(((ViewHolder) holder).item_movie_pic);
+                        }
+                    }
+                    else{
+                        Toast.makeText(MyfavoriteActivity.this, "连接失败 " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
         }
 
         @Override

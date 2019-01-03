@@ -171,11 +171,11 @@
             android:layout_width="match_parent"
             android:layout_height="100dp">
             <ImageView
+                android:id="@+id/myinfo_pic1"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:layout_margin="5dp"
-                android:src="@drawable/info_recommend" />
+                android:layout_margin="5dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -183,18 +183,18 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/myinfo_title1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="黑镜"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/myinfo_intro1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="黑色荧幕前后，不存在的自由意志。" />
+                    android:padding="15dp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -215,11 +215,11 @@
             android:layout_width="match_parent"
             android:layout_height="100dp">
             <ImageView
+                android:id="@+id/myinfo_pic2"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:layout_margin="5dp"
-                android:src="@drawable/info_recommend1" />
+                android:layout_margin="5dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -227,18 +227,18 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/myinfo_title2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="地球最后的夜晚"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/myinfo_intro2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="无来也无往：生命是一场莫比乌斯式的还魂梦游。" />
+                    android:padding="15dp" />
             </LinearLayout>
 
         </LinearLayout>
