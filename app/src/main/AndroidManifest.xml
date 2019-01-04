@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="mad.android.com.mad">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,18 +8,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
-        tools:ignore="ProtectedPermissions" />
-
-    <uses-feature android:name="android.hardware.camera"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
-
-    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -29,30 +17,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MeFavoriteActivity">
+        <activity android:name=".view.MovieInfo">
+            <intent-filter>
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".register_login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Test">
+        <activity android:name=".view.ADetailActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".MyfavoriteActivity"></activity>
-        <activity android:name=".MeInfoActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".register_login.ResetPasswordActivity"></activity>
+        <activity android:name=".view.MainActivity"></activity>
         <activity android:name=".register_login.RegisterActivity"></activity>
-        <activity android:name=".ADetailActivity"></activity>
-        <activity android:name=".meInfo.MeAvatarShowerAty"></activity>
-        <activity android:name=".meInfo.MeEditorMessageAty"></activity>
-        <activity android:name=".meInfo.MeEditorNicknameAty"></activity>
-
+        <activity android:name=".register_login.ResetPasswordActivity"></activity>
+        <activity android:name=".view.MeFavoriteActivity"></activity>
+        <activity android:name=".myInfo.MeInfoActivity"></activity>
+        <activity android:name=".myInfo.MeAvatarShowerAty"></activity>
+        <activity android:name=".myInfo.MeEditorMessageAty"></activity>
+        <activity android:name=".myInfo.MeEditorNicknameAty"></activity>
+        <activity android:name=".view.MyFavorite"></activity>
+        <activity android:name=".view.MyCollection"></activity>
+        <activity android:name=".view.MyHistory"></activity>
     </application>
-
 
 </manifest>

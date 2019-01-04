@@ -2,13 +2,16 @@ package mad.android.com.mad.model;
 
 import android.util.Log;
 
-import mad.android.com.mad.MoviesBean;
-import mad.android.com.mad.network.Api;
+import mad.android.com.mad.bean.MoviesBean;
+import mad.android.com.mad.model.IMoviesModel;
+import mad.android.com.mad.presenter.IMoviesLoadListener;
 import mad.android.com.mad.network.RetrofitHelper;
+import mad.android.com.mad.network.Api;
+
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-
+//电影加载model
 public class MoviesModel implements IMoviesModel {
     private static final String TAG = "MoviesModel";
     @Override

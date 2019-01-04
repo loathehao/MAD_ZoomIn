@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    android:layout_margin="10dp"
+    android:id="@+id/cv_article"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="left"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_article_poster"
+                android:layout_width="75dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/tv_article_movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="电影名"
+                android:textAlignment="center"
+                android:textColor="@color/text_common"
+                android:textSize="16dp" />
+            <Button
+                android:id="@+id/article_like"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorAccent"
+                android:text="赞"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_article_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:text="❤2345"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_article_user_photo"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/my"
+                    android:layout_margin="8dp" />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_article_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="lucas"
+                        android:textColor="@color/text_common"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_article_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="2019-01-01"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/article_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="评分:8"
+                    android:textColor="@color/colorAccent"
+                    android:textAlignment="center"
+                    android:textSize="18dp" />
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_article_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5dp"
+                        android:text="一篇走心的长影评"
+                        android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/tv_article_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:text="这部电影非常好，此处省略2000字"
+                        android:textSize="14dp" />
+                </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

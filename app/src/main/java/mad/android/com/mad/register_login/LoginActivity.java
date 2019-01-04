@@ -17,18 +17,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.Properties;
-
+import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.LogInListener;
-import mad.android.com.mad.MainActivity;
 import mad.android.com.mad.R;
-import mad.android.com.mad.beans.AppUser;
+import mad.android.com.mad.bean.AppUser;
+import mad.android.com.mad.view.MainActivity;
 
+//登陆界面
 public class LoginActivity extends Activity {
     private static final String LOG_MSG = "LoginActivity";
     private static final int BMOB_101 = 101;
@@ -51,6 +48,7 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
+        Bmob.initialize(this, "acbc897f711009c562745ec99aacfd49");
         initView();
         userLogin();
 
@@ -129,6 +127,7 @@ public class LoginActivity extends Activity {
                             if (appUser != null) {
                                 Log.i(LOG_MSG, "$$$$$$: 用户登陆成功!");
                                 Toast.makeText(LoginActivity.this, "登录成功, 欢迎使用!", Toast.LENGTH_SHORT).show();
+                                LoginActivity.this.finish();
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             } else {
                                 Log.i(LOG_MSG, ">>>>>> 登录失败: " + e.getErrorCode() + ",  " + e.getMessage());

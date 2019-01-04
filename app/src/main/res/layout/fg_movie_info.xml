@@ -110,7 +110,7 @@
                                                 android:id="@+id/like"
                                                 android:layout_width="120dp"
                                                 android:layout_height="25dp"
-                                                android:src="@drawable/like"/>
+                                                android:src="@drawable/dislike"/>
 
                                             <TextView
                                                 android:id="@+id/collect"
@@ -139,19 +139,19 @@
                                     android:layout_marginRight="10dp"
                                     android:textColor="#2f2f2f"
                                     android:layout_gravity="center_vertical"
-                                    android:textSize="20sp"/>
+                                    android:textSize="18sp"/>
 
                                     <com.iarcuschin.simpleratingbar.SimpleRatingBar
                                         android:id="@+id/ratingbar"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
-                                        app:srb_starSize="30dp"
+                                        app:srb_starSize="24dp"
                                         app:srb_numberOfStars="5"
                                         app:srb_fillColor="@color/colorTheme"
-                                        app:srb_borderColor="@color/colorTheme2"
-                                        app:srb_rating="1"
-                                        app:srb_stepSize="1"
+                                        app:srb_borderColor="@color/colorTheme"
+                                        app:srb_rating="0"
+                                        app:srb_stepSize="0.5"
                                         app:srb_drawBorderEnabled="true"/>
 
                                 </LinearLayout>
@@ -173,19 +173,18 @@
                                 android:layout_width="35dp"
                                 android:layout_height="120dp"
                                 android:background="@color/colorAccent"
+                                android:textColor="@color/colorWhite"
                                 android:paddingTop="30dp"
                                 android:text="简介"
                                 android:textAlignment="center"
-                                android:textColor="@color/colorWhite"
                                 android:textSize="20sp" />
 
                             <TextView
-                                android:id="@+id/movie_info_brief"
+                                android:id="@+id/tv_movie_info_brief"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:paddingTop="30dp"
-                                android:textAlignment="center"
-                                android:textSize="20sp" />
+                                android:padding="5dp"
+                                android:textSize="13sp" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
 
@@ -201,8 +200,10 @@
 
                             <TextView
                                 android:layout_width="35dp"
-                                android:layout_height="120dp"
-                                android:paddingTop="30dp"
+                                android:layout_height="150dp"
+                                android:paddingTop="40dp"
+                                android:background="@color/colorAccent"
+                                android:textColor="@color/colorWhite"
                                 android:text="影人"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -228,8 +229,10 @@
 
                             <TextView
                                 android:layout_width="35dp"
-                                android:layout_height="120dp"
-                                android:paddingTop="30dp"
+                                android:layout_height="150dp"
+                                android:paddingTop="40dp"
+                                android:background="@color/colorAccent"
+                                android:textColor="@color/colorWhite"
                                 android:text="剧照"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />
@@ -255,8 +258,10 @@
 
                             <TextView
                                 android:layout_width="35dp"
-                                android:layout_height="120dp"
-                                android:paddingTop="30dp"
+                                android:layout_height="150dp"
+                                android:paddingTop="40dp"
+                                android:background="@color/colorAccent"
+                                android:textColor="@color/colorWhite"
                                 android:text="视频"
                                 android:textAlignment="center"
                                 android:textSize="20sp" />

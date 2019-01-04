@@ -1,7 +1,7 @@
 package mad.android.com.mad.network;
 
 
-import mad.android.com.mad.MoviesBean;
+import mad.android.com.mad.bean.MoviesBean;
 
 
 import java.util.concurrent.TimeUnit;
@@ -12,6 +12,7 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import rx.Observable;
 
+//实现retrofi+okhttp网络功能
 
 public class RetrofitHelper {
     private static OkHttpClient okHttpClient;

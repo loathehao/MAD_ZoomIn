@@ -1,12 +1,12 @@
 package mad.android.com.mad.presenter;
 
 
-import mad.android.com.mad.MoviesBean;
-import mad.android.com.mad.model.IMoviesLoadListener;
+import mad.android.com.mad.bean.MoviesBean;
 import mad.android.com.mad.model.IMoviesModel;
 import mad.android.com.mad.model.MoviesModel;
 import mad.android.com.mad.view.IMoviesView;
 
+//电影presenter层
 public class MoviesPresenter implements IMoviesPresenter,IMoviesLoadListener {
 
     private IMoviesModel iMoviesModel;

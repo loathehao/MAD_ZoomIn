@@ -14,6 +14,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.UpdateListener;
 import mad.android.com.mad.R;
 
+//重制密码
 public class ResetPasswordActivity extends Activity {
     private static final String LOG_MSG = "ResetPasswordActivity";
     private static final int BMOB_205 = 205;
@@ -33,8 +34,8 @@ public class ResetPasswordActivity extends Activity {
         userResetPassword();  // 重置密码业务逻辑
     }
 
-    /**
-     * 初始化页面
+    /*
+     初始化页面
      */
     private void initView() {
         // 初始化页面标题栏
@@ -53,7 +54,7 @@ public class ResetPasswordActivity extends Activity {
         TextView titleRightTv = (TextView) findViewById(R.id.title_right_text_tv);
         titleRightTv.setVisibility(View.GONE);
 
-        // // 初始化界面控件
+        //初始化界面控件
         resetEmailEt = (EditText) findViewById(R.id.reset_email_et);
         resetWarnImv = (ImageView) findViewById(R.id.reset_email_warn_imv);
         resetPasswdBtn = (Button) findViewById(R.id.reset_passwd_btn);

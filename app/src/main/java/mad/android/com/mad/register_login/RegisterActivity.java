@@ -16,12 +16,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import cn.bmob.v3.Bmob;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 import mad.android.com.mad.R;
-import mad.android.com.mad.beans.AppUser;
+import mad.android.com.mad.bean.AppUser;
 
+//注册界面
 public class RegisterActivity extends Activity {
     private static final String LOG_MSG = "RegisterActivity";
 
@@ -48,7 +48,6 @@ public class RegisterActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_activity);
-        Bmob.initialize(this, "acbc897f711009c562745ec99aacfd49");
 
         initView(); // 初始化界面控件
 
