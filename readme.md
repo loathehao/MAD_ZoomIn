@@ -20,4 +20,4 @@ MAD_ZoomIn/app/release/[app-release.apk](https://github.com/loathehao/MAD_ZoomIn
 
 文档：
 
-MAD_ZoomIn/doc/
+MAD_ZoomIn/doc/[ZoomIn.pdf](https://github.com/loathehao/MAD_ZoomIn/blob/master/doc/ZoomIn.pdf)
